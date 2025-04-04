@@ -3,7 +3,8 @@ Webhooks present a powerful method for ensuring assets are synchronised across s
 
 Complementing webhooks, the DAM API would handle the bidirectional aspect of this integration, though specific API capabilities will be vendor dependent.
 
-![image](https://github.com/user-attachments/assets/27987c69-b286-489e-9462-f855a1f0ec9b)
+![image](https://github.com/user-attachments/assets/dba463e3-4787-416d-b12c-f6aa9e2a7748)
+
 
 ### Vimeo Webhook Functionality:
 
