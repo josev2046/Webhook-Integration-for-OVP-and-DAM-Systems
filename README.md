@@ -52,35 +52,35 @@ Accept: application/vnd.vimeo.*+json;version=3.4
 
 **Single:**
 
-GET <https://api.vimeo.com/apps/{app_id}/webhooks/{webhook_id}>
+`GET <https://api.vimeo.com/apps/{app_id}/webhooks/{webhook_id}>`
 
 
 **All:**
 
-GET <https://api.vimeo.com/apps/{app_id}/webhooks>
+`GET <https://api.vimeo.com/apps/{app_id}/webhooks>`
 
 
 **Headers:**
 
-Authorization: bearer {access_token}
-Accept: application/vnd.vimeo.*+json;version=3.4
+`Authorization: bearer {access_token}
+Accept: application/vnd.vimeo.*+json;version=3.4`
 
 
 ##### Update:
 
-PATCH <https://api.vimeo.com/apps/{app_id}/webhooks/{webhook_id}>
+`PATCH <https://api.vimeo.com/apps/{app_id}/webhooks/{webhook_id}>`
 
 
-**Headers:** Same as POST
+**Headers:** Same as `POST`
 
-**Body:** Include modified parameters (e.g., {"is_enabled": false})
+**Body:** Include modified parameters (e.g.,  `{"is_enabled": false}`)
 
 ##### Delete:
 
-DELETE <https://api.vimeo.com/apps/{app_id}/webhooks/{webhook_id}>
+`DELETE <https://api.vimeo.com/apps/{app_id}/webhooks/{webhook_id}>`
 
 
-**Headers:** Same as POST
+**Headers:** Same as `POST`
 
 **Webhook Security:**
 
@@ -106,9 +106,9 @@ Exceeding rate limits will result in blocked requests until the quota resets.
 **Error Handling:**
 
 Common errors:
-2204 (parameter problem)
-2205 (bad body format)
-8002 (unrecognized access token)
+`2204` (parameter problem)
+`2205` (bad body format)
+`8002` (unrecognized access token)
 Resolution: Verify parameters, body format, and access tokens.
 
 **Further information:**
