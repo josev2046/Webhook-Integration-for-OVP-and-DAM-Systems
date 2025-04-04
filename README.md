@@ -1,4 +1,6 @@
 # Webhook Integration between OVP and DAM Systems
+[![DOI](https://zenodo.org/badge/960289215.svg)](https://doi.org/10.5281/zenodo.15145655)
+
 Webhooks present a powerful method for ensuring assets are synchronised across systems, including OVPs and DAMs. This document explores how webhooks could be used in Digital Asset Management (DAM) and Media Asset Management (MAM) integrations, taking Vimeo as an example OVP.
 
 Complementing webhooks, the DAM API would handle the bidirectional aspect of this integration, though specific API capabilities will be vendor dependent.
