@@ -14,7 +14,6 @@ Vimeo app webhooks provide instant updates on user actions. Webhooks can therefo
 * Vimeo API Application
 * Webhooks Capability (`CAPABILITY_WEBHOOK_SCOPE`)
 * Access Token (with `public`, `private`, `edit`, `delete`, and `webhooks` scopes)
-* Consider using official SDKs (e.g., PHP, Python, Node.js)
 
 #### Configuration:
 
@@ -39,7 +38,7 @@ Accept: application/vnd.vimeo.*+json;version=3.4
 
 **Example:**
 
-```json
+````json
 {
   "is_enabled": true,
   "webhook_url": "[https://example.com/webhook](https://example.com/webhook)",
