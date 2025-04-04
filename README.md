@@ -1,5 +1,5 @@
 # Webhook Integration between OVP and DAM Systems
-Webhooks offer a powerful mechanism for synchronising assets across systems, such as OVPs and DAMs. This document outlines the potential use of webhooks in Digital Asset Management (DAM) and Media Asset Management (MAM) integrations. 
+Webhooks provide a robust mechanism for synchronising assets between systems, such as OVPs and DAMs. This document outlines the potential application of webhooks in Digital Asset Management (DAM) and Media Asset Management (MAM) integrations, using Vimeo as an illustrative example of an OVP.
 
 ![image](https://github.com/user-attachments/assets/27987c69-b286-489e-9462-f855a1f0ec9b)
 
