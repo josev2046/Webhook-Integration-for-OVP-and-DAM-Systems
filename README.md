@@ -24,14 +24,14 @@ Vimeo delivers event notifications via HTTP POST requests to this URL.
 
 ##### Create:
 
-POST <https://api.vimeo.com/apps/{app_id}/webhooks>
+`POST <https://api.vimeo.com/apps/{app_id}/webhooks>`
 
 
 **Headers:**
 
-Authorization: bearer {access_token}
+`Authorization: bearer {access_token}
 Content-Type: application/json
-Accept: application/vnd.vimeo.*+json;version=3.4
+Accept: application/vnd.vimeo.*+json;version=3.4`
 
 
 **Body:**
@@ -92,15 +92,15 @@ Validate signatures using SHA256 HMAC.
 **Webhook Events and Payloads:**
 
 Events trigger webhooks with specific payloads.
-Delivery headers: Content-Type, X-Webhook-Signature
-Supported events: live-event-started, live-event-updated, live-event-ended, live-event-archive-available, live-event-clip-created, video-deleted, video-created, video-transcode-playable, video-transcode-fully-playable, video-transcode-complete, transcript-status-complete, automatic-thumbnail-available, video-upload-failed, content-scan-completed.
-Payload structure: webhook_type, data object, timestamp
+Delivery headers: `Content-Type`, `X-Webhook-Signature`
+Supported events: `live-event-started`, `live-event-updated`, `live-event-ended`, `live-event-archive-available`, `live-event-clip-created`, `video-deleted`, `video-created`, `video-transcode-playable`, `video-transcode-fully-playable`, `video-transcode-complete`, `transcript-status-complete`, `automatic-thumbnail-available`, `video-upload-failed`, `content-scan-completed`.
+Payload structure: `webhook_type, data object, timestamp`
 Refer to Vimeo documentation for detailed payload information for each event.
 
 **Rate Limits:**
 
 Webhook requests are subject to rate limits based on Vimeo account type.
-Rate limiting headers: X-Webhook-RateLimit-Limit, X-Webhook-RateLimit-Remaining, X-Webhook-RateLimit-Reset
+Rate limiting headers: `X-Webhook-RateLimit-Limit`, `X-Webhook-RateLimit-Remaining`, `X-Webhook-RateLimit-Reset`
 Exceeding rate limits will result in blocked requests until the quota resets.
 
 **Error Handling:**
