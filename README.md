@@ -38,69 +38,11 @@ Accept: application/vnd.vimeo.*+json;version=3.4
 
 **Example:**
 
-````json
+```json
 {
   "is_enabled": true,
   "webhook_url": "[https://example.com/webhook](https://example.com/webhook)",
   "webhook_type": "video-transcode-playable",
   "secret": "your-secret-key"
 }
-
-
-Plaintext
-
-**Configurable parameters:** `is_enabled` (Boolean), `webhook_url` (String), `webhook_type` (String), `secret` (String)
-Retrieve:
-Single:
-
-GET <[https://api.vimeo.com/apps/](https://api.vimeo.com/apps/){app_id}/webhooks/{webhook_id}>
-All:
-
-GET <[https://api.vimeo.com/apps/](https://api.vimeo.com/apps/){app_id}/webhooks>
-Headers:
-
-Authorization: bearer {access_token}
-Accept: application/vnd.vimeo.*+json;version=3.4
-Update:
-PATCH <[https://api.vimeo.com/apps/](https://api.vimeo.com/apps/){app_id}/webhooks/{webhook_id}>
-Headers: Same as POST
-
-Body: Include modified parameters (e.g., {"is_enabled": false})
-
-Delete:
-DELETE <[https://api.vimeo.com/apps/](https://api.vimeo.com/apps/){app_id}/webhooks/{webhook_id}>
-Headers: Same as POST
-
-Webhook Security:
-
-Implement webhook signature validation.
-Use a secret key during webhook creation/update.
-Vimeo signs requests with the X-Webhook-Signature header.
-Validate signatures using SHA256 HMAC.
-
-Webhook Events and Payloads:
-
-Events trigger webhooks with specific payloads.
-Delivery headers: Content-Type, X-Webhook-Signature
-Supported events: live-event-started, live-event-updated, live-event-ended, live-event-archive-available, live-event-clip-created, video-deleted, video-created, video-transcode-playable, video-transcode-fully-playable, video-transcode-complete, transcript-status-complete, automatic-thumbnail-available, video-upload-failed, content-scan-completed.
-Payload structure: webhook_type, data object, timestamp
-Refer to Vimeo documentation for detailed payload information for each event.
-
-Rate Limits:
-
-Webhook requests are subject to rate limits based on Vimeo account type.
-Rate limiting headers: X-Webhook-RateLimit-Limit, X-Webhook-RateLimit-Remaining, X-Webhook-RateLimit-Reset
-Exceeding rate limits will result in blocked requests until the quota resets.
-
-Error Handling:
-
-Common errors:
-2204 (parameter problem)
-2205 (bad body format)
-8002 (unrecognized access token)
-Resolution: Verify parameters, body format, and access tokens.
-
-Further information:
-
-https://developer.vimeo.com/api/app-webhooks
 
