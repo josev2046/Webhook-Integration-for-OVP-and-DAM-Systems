@@ -1,0 +1,27 @@
+@startuml
+box "Application" #LightSkyBlue
+  participant OVP
+  participant DAM
+
+  alt OVP Event
+      OVP -> DAM: Webhook POST (video-created, video-transcode-complete, video-deleted)
+      note right: Includes video URI, metadata, etc.
+      activate DAM
+      DAM -> OVP: 200 OK
+      deactivate DAM
+  else DAM Event
+      DAM -> OVP: API Request (create/update/delete video)
+      note right: Includes video data, metadata, etc. 
+      activate OVP
+      OVP --> DAM: API Response (success/error)
+      deactivate OVP
+      alt Success
+          DAM -> OVP: Webhook POST (video-created, video-updated, video-deleted) 
+          note right: Includes video URI, metadata, etc.
+          activate OVP
+          OVP -> DAM: 200 OK
+          deactivate OVP
+      end
+  end
+end box
+@enduml
