@@ -1,6 +1,8 @@
 # Webhook Integration between OVP and DAM Systems
 Webhooks present a powerful method for ensuring assets are synchronised across systems, including OVPs and DAMs. This document explores how webhooks could be used in Digital Asset Management (DAM) and Media Asset Management (MAM) integrations, taking Vimeo as an example OVP.
 
+Complementing webhooks, the DAM API would handle the bidirectional aspect of this integration, though specific API capabilities will be vendor dependent.
+
 ![image](https://github.com/user-attachments/assets/27987c69-b286-489e-9462-f855a1f0ec9b)
 
 ### Vimeo Webhook Functionality:
@@ -38,12 +40,12 @@ Accept: application/vnd.vimeo.*+json;version=3.4`
 
 **Example:**
 
-~~~json
+~~~```json
 {
-  "is_enabled": true,
-  "webhook_url": "[https://example.com/webhook](https://example.com/webhook)",
-  "webhook_type": "video-transcode-playable",
-  "secret": "your-secret-key"
+  "is_enabled": true,
+  "webhook_url": "[https://example.com/webhook](https://example.com/webhook)",
+  "webhook_type": "video-transcode-playable",
+  "secret": "your-secret-key"
 }
 ~~~
 **Configurable parameters:** `is_enabled` (Boolean), `webhook_url` (String), `webhook_type` (String), `secret` (String)
@@ -73,7 +75,7 @@ Accept: application/vnd.vimeo.*+json;version=3.4`
 
 **Headers:** Same as `POST`
 
-**Body:** Include modified parameters (e.g.,  `{"is_enabled": false}`)
+**Body:** Include modified parameters (e.g.,  `{"is_enabled": false}`)
 
 ##### Delete:
 
