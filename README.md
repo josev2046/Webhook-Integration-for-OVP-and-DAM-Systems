@@ -46,6 +46,8 @@ Accept: application/vnd.vimeo.*+json;version=3.4
   "webhook_type": "video-transcode-playable",
   "secret": "your-secret-key"
 }
+
+
 Plaintext
 
 **Configurable parameters:** `is_enabled` (Boolean), `webhook_url` (String), `webhook_type` (String), `secret` (String)
